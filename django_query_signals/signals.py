@@ -6,16 +6,16 @@ from django.db.models.query import QuerySet
 from django.dispatch import Signal
 
 # pylint: disable=invalid-name
-pre_delete = Signal(providing_args=["args"])
-post_delete = Signal(providing_args=["args"])
-pre_update = Signal(providing_args=["args"])
-post_update = Signal(providing_args=["args"])
-pre_bulk_create = Signal(providing_args=["args"])
-post_bulk_create = Signal(providing_args=["args"])
-pre_get_or_create = Signal(providing_args=["args"])
-post_get_or_create = Signal(providing_args=["args"])
-pre_update_or_create = Signal(providing_args=["args"])
-post_update_or_create = Signal(providing_args=["args"])
+pre_delete = Signal()
+post_delete = Signal()
+pre_update = Signal()
+post_update = Signal()
+pre_bulk_create = Signal()
+post_bulk_create = Signal()
+pre_get_or_create = Signal()
+post_get_or_create = Signal()
+pre_update_or_create = Signal()
+post_update_or_create = Signal()
 
 METHODS = {'bulk_create':QuerySet.bulk_create,
            'get_or_create':QuerySet.get_or_create,
